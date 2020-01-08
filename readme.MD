@@ -2,9 +2,18 @@
 a simple proxy which broadcast rest api request to websocket(socket.io) clients without auth and cache control.
 
 ###forever
+安装forever:
 npm install -g forever
-然后使用命令：
-forever start -l ws.log -f --pidFile pid index.js
+如果命令行输入没有forever，自行搜索添加.profiles， bash.rc等配置文件。
+
+启动：
+forever start -l ws.log -f -a --pidFile pid index.js
+
+停止:
+forever stopall
+
+查看:
+forever list
 
 ###关于ws.js
 没有经过任何包装的websocket服务
