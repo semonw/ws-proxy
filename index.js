@@ -12,8 +12,7 @@ io.on('connection', function (socket) {
 
     socket.on('heartbeat',function(){
         console.log('heartbeat...');
-        socket.emit('heartbeat', 'echo');
-        res.send('heartbeat.');
+        socket.emit('heartbeat', 'heartbeat');
     });
 
     console.log('client count:' + io.clients.length);
